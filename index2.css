@@ -1,0 +1,149 @@
+input[type="text"], input[type="password"] 
+{
+	font-family: 'Open Sans', sans-serif;
+	width:90%;
+	padding:0.1em 0.7em 0.1em 0.7em;
+	color:#858282;
+	font-size:14px;
+	outline: none;
+	background: none;
+	border:none;
+	font-weight:400;
+}
+
+form 
+{
+	padding-bottom:7%;
+	padding-left:10%;
+	padding-right:10%;
+}
+form li
+{
+	border:1px solid #B4B2B2;
+	list-style:none;
+	margin-bottom:15px;
+	width:100%;
+	background:none;
+	border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	-o-	border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+
+}
+form li:hover
+{
+	border:1px solid #40A9DF;
+	box-shadow: 0 0 1em #40A9DF;
+	-webkit-box-shadow: 0 0 1em #40A9DF;
+	-o-box-shadow: 0 0 1em #40A9DF;
+	-moz-box-shadow: 0 0 1em #40A9DF;
+}
+
+input[type="submit"]
+{
+	font-size:14px;
+	display: inline-block;
+	font-weight:600;
+	color: ghostwhite;
+	transition: 0.1s all;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-o-transition: 0.1s all;
+	cursor: pointer;
+	outline: none;
+	padding:15px 10px;
+	margin-top:3px;
+	font-family: 'Open Sans', sans-serif;
+	width:200px;
+	border:none;
+	border-radius: 0.3em;
+	background-color: orange;
+}
+input:hover{
+	color:ghostwhite!important;
+}
+
+input.form-control
+{
+	font-size:14px;
+	display: inline-block;
+	font-weight:400;
+	color: black;
+	transition: 0.1s all;
+	outline: none;
+	padding-left: 15px;
+	font-family: 'Open Sans', sans-serif;
+	width:100%;
+	border:none;
+	border-radius: 0.3em;
+}
+input.form-control:hover{
+	color:black!important;
+	border:2px solid!important;
+	border-color: orange!important;
+}
+
+.sinscrire
+{
+	font-size: 14px;
+}
+
+.banniere
+{
+    background: radial-gradient(ghostwhite, darkseagreen)!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    width: 100%!important;
+}
+
+.infoProfil{
+	text-align: center!important;
+}
+
+.btn-default{
+	background-color: orange!important;
+	color: ghostwhite!important;
+}
+.btn-default:hover{
+	border:1px solid ghostwhite!important;
+}
+
+.btn-default2{
+	font-size:14px;
+	display: inline-block;
+	font-weight:600;
+	color: ghostwhite;
+	transition: 0.1s all;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-o-transition: 0.1s all;
+	cursor: pointer;
+	outline: none;
+	padding:15px 10px;
+	margin-top:3px;
+	font-family: 'Open Sans', sans-serif;
+	width:200px;
+	border:none;
+	border-radius: 0.3em;
+	background-color: orange;
+	text-decoration: none!important;
+}
+.btn-default2:hover{
+	color: ghostwhite!important;
+	background-color: orange!important;
+	text-decoration: none!important;
+}
+
+.retour{
+	margin-left: 20px;
+}
+
+.accueil
+{
+	margin: 0;
+	padding: 0;
+	background: url(images/noix.jpg) no-repeat center fixed;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  	background-size: cover; /* version standardisée */
+	opacity: 0.8;
+}
