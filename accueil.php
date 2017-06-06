@@ -1,7 +1,7 @@
 <?php
 session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=ppe;charset=utf8', 'root', 'root'); //connection à la bdd
-
+//
 if ($_SESSION['id_connexion'] > 0) {
 ?>
 
