@@ -1,9 +1,8 @@
 <?php
 session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=ppe;charset=utf8', 'root', 'root'); //connection à la bdd
+$bdd = new PDO('mysql:host=localhost;dbname=ppe;charset=utf8', 'root', ''); //connection à la bdd
 
-    //On teste pour savoir si il y a bien dans la BDD un utilisateur avec cet identifiant et ce mot de passe
-    if(isset($_POST['boutonconnect'])){
+  if(isset($_POST['boutonconnect'])){
       $login = htmlspecialchars(trim($_POST['login']));
       $mdp = htmlspecialchars(trim($_POST['mdp']));
 
@@ -40,9 +39,9 @@ $bdd = new PDO('mysql:host=localhost;dbname=ppe;charset=utf8', 'root', 'root'); 
         <link rel="stylesheet" href="index.css" />
         <link href="/www/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <title>Projet PPE</title>
     </head>
 

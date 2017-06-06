@@ -33,12 +33,19 @@ $mdp2 = htmlspecialchars(trim($_POST['mdp2']));
                ));
 
 
-              $req2 = $bdd->prepare('INSERT INTO producteurs(nom_Responsable, nom_Entreprise, adresse_Entreprise, id_connexion) VALUES(:nom_Responsable, :nom_Entreprise, :adresse_Entreprise, LAST_INSERT_ID())');
+              $req2 = $bdd->prepare('INSERT INTO producteurs(nom_Responsable, nom_Entreprise, adresse_Entreprise, id_connexion, Interne) VALUES(:nom_Responsable, :nom_Entreprise, :adresse_Entreprise, LAST_INSERT_ID(), :Interne)');
 
               $req2->execute(array(
               'nom_Entreprise' => $nom_Entreprise,
               'nom_Responsable' => $nom_Responsable,
               'adresse_Entreprise' => $adresse_Entreprise,
+              'Interne' => "Externe"
+               ));
+
+              $req2 = $bdd->prepare('INSERT INTO distributeurjava(nomDistributeur) VALUES(:nom_Entreprise)');
+
+              $req2->execute(array(
+              'nom_Entreprise' => $nom_Entreprise,
                ));
          
               header('location: index.php');
@@ -61,9 +68,9 @@ $mdp2 = htmlspecialchars(trim($_POST['mdp2']));
         <link rel="stylesheet" href="index.css" />
         <link href="/www/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <title>Projet PPE</title>
     </head>
 

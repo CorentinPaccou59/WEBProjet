@@ -57,8 +57,14 @@
                     }
                     if ($_SESSION['id_droit'] == 1) {
                     ?>
-
-                    <li style="text-align: center"><a href="ajoutProducteursAdmin.php">Ajouter un producteur</a></li> 
+                    <li style="text-align: center" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title=Gérez vos commandes Ici !">Producteurs
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li style="text-align: center"><a href="voirProducteursAdmin.php">Voir tous les producteurs</a></li> 
+                                <li style="text-align: center"><a href="ajoutProducteursAdmin.php">Ajouter un producteur</a></li> 
+                            </ul>
+                    </li>
                     <?php
                     }
                     ?>

@@ -22,7 +22,7 @@ $mdp2 = htmlspecialchars(trim($_POST['mdp2']));
         if($pseudoexist == 0)
         {
 
-              $req = $bdd->prepare('INSERT INTO connexion(login, mdp, mdp2, id_droit,accepte) VALUES(:login, :mdp, :mdp2, :id_droit, accepte)');
+              $req = $bdd->prepare('INSERT INTO connexion(login, mdp, mdp2, id_droit,accepte) VALUES(:login, :mdp, :mdp2, :id_droit, :accepte)');
 
               $req->execute(array(
               'mdp' => $mdp,
@@ -33,16 +33,15 @@ $mdp2 = htmlspecialchars(trim($_POST['mdp2']));
                ));
 
 
-              $req2 = $bdd->prepare('INSERT INTO producteurs(nom_Responsable, nom_Entreprise, adresse_Entreprise, id_connexion, Interne) VALUES(:nom_Responsable, :nom_Entreprise, :adresse_Entreprise, LAST_INSERT_ID(), :Interne,)');
+              $req2 = $bdd->prepare('INSERT INTO producteurs(nom_Responsable, nom_Entreprise, adresse_Entreprise, id_connexion, Interne) VALUES(:nom_Responsable, :nom_Entreprise, :adresse_Entreprise, LAST_INSERT_ID(), :Interne)');
 
               $req2->execute(array(
               'nom_Entreprise' => $nom_Entreprise,
               'nom_Responsable' => $nom_Responsable,
               'adresse_Entreprise' => $adresse_Entreprise,
-              'Interne' => 1
+              'Interne' => "Interne"
                ));
-         
-              header('location: index.php');
+
 
         } else $messageErreur = '<p class = "phrase"> Le nom d\'utilisateur est déjà utilisé</p>';
 
@@ -62,9 +61,9 @@ $mdp2 = htmlspecialchars(trim($_POST['mdp2']));
         <link rel="stylesheet" href="index2.css" />
         <link href="/www/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
         <title>Projet PPE</title>
     </head>
 
